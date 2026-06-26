@@ -57,6 +57,9 @@ export const metadata: Metadata = {
       'Infrastruttura AI, formazione e podcast per attività locali. Tre mondi, un\'unica visione.',
     images: ['/logos/mami-ia.png'],
   },
+  verification: {
+    google: 'BoMl2NyYX-ZNZA66gVDxC60qexks1k-beuFZKzJCuvA',
+  },
   robots: {
     index: true,
     follow: true,
