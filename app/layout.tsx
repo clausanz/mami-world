@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     images: ['/logos/mami-ia.png'],
   },
   verification: {
-    google: 'CpyIIJGQo7jBKR5KJEujJdTFKJz-33XxWxmsA90pvfM',
+    google: 'lyycWoq25ysaezubedRLNr7hE5fy9zatZzVYwGLV7-s',
   },
   robots: {
     index: true,
