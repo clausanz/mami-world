@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     images: ['/logos/mami-ia.png'],
   },
   verification: {
-    google: 'BoMl2NyYX-ZNZA66gVDxC60qexks1k-beuFZKzJCuvA',
+    google: 'CpyIIJGQo7jBKR5KJEujJdTFKJz-33XxWxmsA90pvfM',
   },
   robots: {
     index: true,
@@ -82,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="it">
       <head>
-        <meta name="google-site-verification" content="BoMl2NyYX-ZNZA66gVDxC60qexks1k-beuFZKzJCuvA" />
+        <meta name="google-site-verification" content="CpyIIJGQo7jBKR5KJEujJdTFKJz-33XxWxmsA90pvfM" />
       </head>
       <body>
         <LanguageProvider>
