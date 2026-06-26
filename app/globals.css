@@ -1,27 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink:        #050505;
+  --obsidian:   #0A0A0B;
+  --gold:       #E8C56B;
+  --gold-deep:  #C99A3B;
+  --gold-hi:    #F4E4B0;
+  --champagne:  #EDE3CE;
+  --muted:      #8A8473;
+  --lime:       #C8F02A;
+  --pink:       #FF5FA2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--obsidian);
+  color: var(--champagne);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.font-display { font-family: 'Bodoni Moda', serif; }
+.font-brand   { font-family: 'Syne', sans-serif; }
+.font-body    { font-family: 'Inter', sans-serif; }
+
+/* Metallic gold shimmer animation */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
 }
+
+.gold-shimmer {
+  background: linear-gradient(
+    105deg,
+    #C99A3B 0%,
+    #E8C56B 25%,
+    #F4E4B0 50%,
+    #E8C56B 75%,
+    #C99A3B 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gold-shimmer { animation: none; background-position: center; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Hairline divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C99A3B, transparent);
+  opacity: 0.4;
+}
+
+/* Focus visible */
+:focus-visible { outline: 2px solid #E8C56B; outline-offset: 3px; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0B; }
+::-webkit-scrollbar-thumb { background: #C99A3B; border-radius: 3px; }
